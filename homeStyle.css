@@ -266,10 +266,6 @@ nav .loginBtn:hover {
     padding-left: 10px;
   }
 
-  main {
-    margin-top: 250px;
-  }
-
   #about .ytChannel {
     margin-top: 12px;
     margin-bottom: 54px;
@@ -283,9 +279,10 @@ nav .loginBtn:hover {
 
 }
 
-
 main {
-  padding: 20px;
+  margin-top: 0;
+  padding-inline: 20px;
+  padding-block: 0 20px;
   float: left;
 }
 

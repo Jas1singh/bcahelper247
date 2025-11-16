@@ -47,10 +47,10 @@ let ul = document.querySelector('ul');
 
 // let body = document.getElementById('body');
 
-document.oncontextmenu = () => {
-    alert("Don't try to hack us from right click. 😍🤪");
-    return false;
-}
+// document.oncontextmenu = () => {
+//     alert("Don't try to hack us from right click. 😍🤪");
+//     return false;
+// }
 
 
 document.onkeydown = e => {
@@ -91,32 +91,21 @@ document.onkeydown = e => {
     }
 }
 
+const main = document.querySelector('main'); // main content
 
 menu.addEventListener('click', () => {
     ul.classList.toggle('menu_active');
 
+    // Change the menu icon
     let menu_child = menu.firstElementChild;
     if (ul.classList.contains('menu_active')) {
         menu_child.classList.replace('fa-bars', 'fa-xmark');
-    }
-
-    else {
+        main.style.marginTop = '280px'; // Add margin to main
+    } else {
         menu_child.classList.replace('fa-xmark', 'fa-bars');
+        main.style.marginTop = ''; // Remove the margin when menu is closed
     }
 });
-
-// function submitForm() {
-//     document.contact-form.submit();
-//     document.contact-form.reset();
-// }
-
-// function submitForm() {
-//     validateForm();
-//     let frm = document.getElementsByName('contact-form')[0];
-//     frm.submit();
-//     frm.reset();
-//     return false;
-// }
 
 function submitForm() {
     var gmail = document.forms["contact-form"]["email"].value;
