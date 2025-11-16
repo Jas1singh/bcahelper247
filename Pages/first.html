@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BCAHelper.com</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to right bottom, #d8d1cf, #95dae5);
+      /* background: linear-gradient(to right bottom, #cebfb9, #54b4c2); */
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      height: 80px;
+      padding: 20px;
+      margin: 0px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin-right: 30px;
+    }
+
+    header h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: cyan;
+      word-spacing: 6px;
+      font-size: 44px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    nav {
+      background-color: #0a1d30;
+      color: #fff;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 14px 20px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul li {
+      list-style-type: none;
+    }
+
+    nav ul li i {
+      margin-right: 6px;
+    }
+
+    nav ul li a {
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    nav ul li select {
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 2px;
+    }
+
+    nav ul li a:hover,
+    ul li a.active {
+      text-decoration: underline 2px;
+      text-underline-offset: 4px;
+      text-decoration-color: #fff;
+      color: #007cf9;
+    }
+
+    nav .loginBtn {
+      border: none;
+      background-color: #0b76bd;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 8px 20px;
+      cursor: pointer;
+    }
+
+    nav .loginBtn:hover {
+      background-color: #0091ff;
+    }
+
+    main {
+      padding: 20px;
+      float: left;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section ul li a {
+      text-decoration: none;
+    }
+
+
+    .para {
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    h2,
+    h3 {
+      margin-bottom: 0px;
+    }
+
+    h4 {
+      margin-top: 44px;
+      color: #ef0808;
+      font-size: 24px;
+    }
+
+    h4:first-child {
+      margin-top: 32px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    #first .bold {
+      font-size: 22px;
+      margin-top: 6px;
+    }
+
+    #about {
+      margin-top: 80px;
+      margin-bottom: 50px;
+    }
+
+    .ytChannel {
+      margin-top: 20px;
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ytChannel img {
+      position: absolute;
+      float: left;
+      left: 37%;
+    }
+
+    .ytChannel p {
+      font-weight: 800;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+    }
+
+    .ytChannel p a {
+      text-decoration: none;
+      color: blue;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #336699;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      float: left;
+      width: 100%;
+      position: fixed;
+      bottom: 0px;
+    }
+
+    footer strong {
+      color: rgb(244, 141, 7);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    @media screen and (max-width:1024px) {
+      header h1 {
+        font-size: 22px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 26px;
+        width: 100%;
+      }
+
+      nav ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        /* margin-left: 12px;
+        margin-right: 4px; */
+      }
+
+      nav ul li a {
+        padding: 6px 2px;
+      }
+
+      .foundation {
+        font-size: 20px;
+      }
+
+      .foundation select {
+        padding: 8px 10px;
+        font-size: 20px;
+        margin-bottom: 6px;
+        width: 70%;
+      }
+
+      #about .ytChannel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 12px;
+        margin-bottom: 54px;
+        margin-right: 12px;
+      }
+
+      #about .ytChannel img {
+        position: relative;
+        float: left;
+        left: 10%;
+      }
+
+      #about .ytChannel p {
+        font-weight: 800;
+        font-size: 18px;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <img src="./bca_logo1.png" alt="logo" class="logo">
+    <h1>BCA Helper</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+      <!-- <li><a href="#subjects">Subjects</a></li> -->
+      <li><a href="#year" class="active">Resources
+          <select name="year" onchange="location = this.value;">
+            <option value="./first.html">First</option>
+            <option value="./second.html">Second</option>
+            <option value="./third.html">Third</option>
+          </select></a></li>
+      <!-- <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About Us</a></li> -->
+    </ul>
+  </nav>
+
+  <main>
+    <section id="first">
+      <h2>1st Year Resources</h2>
+      <ul>
+
+        <li>
+          <h4>Programming Methodology & DSA</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a
+              href="https://drive.google.com/file/d/1BkzojtlY7GjtuZ3cSLHBr8yGgBsDWGCh/view?usp=drive_link">C_Notes</a>
+          </li>
+          <li> <a href="https://drive.google.com/file/d/1rouDBC147Q-UmNVqDP1HzUfRnGoIggGI/view?usp=drive_link">Cpp
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1BoEkV_hpZ61yUdbO2QsEsd0OSGTI1ODU/view?usp=drive_link"> Cpp
+              Practical</a></li>
+          <li> <a href="https://drive.google.com/file/d/1dnzpKC8Fs4Wqo16PWZgEb4M6odS5YDJw/view?usp=drive_link"> Cpp
+              Programs </a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1HeBe9DSXp0RJK496FacPBDss0bL_gGRe/view?usp=drive_link">C++_Programming
+                Methodology-nep-jun-2022</a></li>
+
+          </ol>
+        </ul>
+
+
+        <li>
+          <h4>Computer Fundamentals & Architecture</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1f6OM1vXEzfnoeOVGO2QmQmcCRW7lfY6L/view?usp=drive_link">CFA
+              Syllabus</a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1y8CY76dxdx58Nkqg--OfvILXmeEBptdn/view?usp=drive_link">CFA-Computer_Fundamentals
+                and Architecture-nep-jun-2022</a></li>
+            <li><a
+                href="https://drive.google.com/file/d/1286-FGNXO-od00-x21EZop1LNWrBph6Y/view?usp=drive_link">CFA-Computer_Fundamentals
+                and Architecture-jan-2017</a></li>
+
+          </ol>
+
+        </ul>
+
+
+        <li>
+          <h4> Mathematics</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1lHhTMPNwbFZf7tLp7vTOTHViy7vlmDUp/view?usp=drive_link">Math
+              Syllabus</a></li>
+          <B> Math Notes </B>
+          <ul style="list-style-type:square">
+            <li><a href="https://drive.google.com/file/d/1j3s-SS5MpU1U4QWOBUalmC6oMe16sXZd/view?usp=drive_link">Unit
+                1</a></li>
+            <li><a href="https://drive.google.com/file/d/1nQspVZrGQgLmKDJp3bP4i_FTRl6aJ6g6/view?usp=drive_link">Unit
+                2</a></li>
+            <li><a href="https://drive.google.com/file/d/1yHDiAYZi6zwKQ_adpQmQ7pSWQIfWlhL2/view?usp=drive_link">Unit
+                3</a></li>
+            <li><a href="https://drive.google.com/file/d/1k-IkNHDSTm6_W4cMNTgFWhWC12Ox1IW3/view?usp=drive_link">Unit
+                4</a></li>
+            <li><a href="https://drive.google.com/file/d/1ZtvxJ31_zchvffBisV1mrsthPGnE8Y94/view?usp=drive_link">Unit
+                5</a></li>
+            <li> <a href="https://drive.google.com/file/d/1RWPdbVizRPVJ5fwSbWear0iP8g8eFanF/view?usp=drive_link"> IMP
+                Questions</a></li>
+          </ul>
+
+
+          <div class="bold"> <B>Question Papers</B></div>
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1wXsTkoqCSfbjuieHOr-lyppvY3JXHmEH/view?usp=drive_link">Discrete-Mathematics-nep-05-jul-2022</a>
+            </li>
+
+          </ol>
+
+        </ul>
+
+
+        <li>
+          <h4>Operating Systems</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1pDIFucZHwKL5nEqwe2tU_cs4BdPDO9JO/view?usp=drive_link">OS
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1PSheJAYrDH5sJP8TKtR-cEep3W3ySIAu/view?usp=drive_link">OS Notes
+            </a></li>
+          <li> <a href="https://drive.google.com/file/d/1ec1rSP5PWWZotikxemBR94JK6_F-avcj/view?usp=drive_link">Linux
+              Command</a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1PqjNw55E4LuKYB_Ax8fvPXXEq_qjSBMB/view?usp=drive_link">Operating-System-nep-03-jul-2022</a>
+            </li>
+
+          </ol>
+        </ul>
+
+
+        <li>
+          <h4>Digital Marketing</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/12bwPtES4jJ2xiSCxQfQ5kEbvlrDMzrrs/view?usp=drive_link">DM
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1eQhFlUBi-bZzMu-X222wL60HVIDEliFO/view?usp=drive_link"> DM
+              Assignment</a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1GVfj5_S5IXVhUQx-MEKC7PHd1dJsEJmu/view?usp=drive_link">Digital-Marketing-nep-2022</a>
+            </li>
+
+          </ol>
+        </ul>
+
+
+        <li>
+          <h4> Foundational Subjects</h4>
+        </li>
+        <div class="foundation">
+          <ol>
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>Hindi</option>
+                <option value="https://drive.google.com/file/d/167Be2Qkxspbnl4-j_KAF5kM41HbK1V3h/view?usp=drive_link">
+                  Syllabus</option>
+
+                <option value="https://drive.google.com/file/d/1HSays2j-X0zuK1pAU4rGjJ458x6t6IxW/view?usp=drive_link">
+                  Grammer</option>
+                <option value="https://drive.google.com/file/d/13uH_knUZMPbxsr9BT957I8tK8K0uxC3o/view?usp=drive_link">
+                  Question Papers</option>
+            </li>
+            </select>
+
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>English</option>
+                <option value="https://drive.google.com/file/d/1szsS4QHtG4oz8OKJ7FmpsZgiqPStyylU/view?usp=drive_link">
+                  Syllabus</option>
+                <option value="https://drive.google.com/file/d/13TG48xgz_xRuIfhxchWaaG1uRaN1pkvy/view?usp=drive_link">
+                  Question Papers</option>
+
+            </li>
+            </select>
+
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>EVS</option>
+                <option value="https://drive.google.com/file/d/1YQ-j2t-0smy7R3Q63gp46y-QMdE2a5Mm/view?usp=drive_link">
+                  Syllabus</option>
+                <option value="https://drive.google.com/file/d/1nQuZ3Xk34AYcc86SO-c8q1NRI9TqjB5c/view?usp=drive_link">
+                  Question Papers</option>
+
+            </li>
+            </select>
+
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>Yoga</option>
+                <option value="https://drive.google.com/file/d/1lF6WYnecL5J75zD8FBsqNyLxYF0OKvOk/view?usp=drive_link">
+                  Syllabus</option>
+                <option value="https://drive.google.com/file/d/1JtSYIaZye_B0qyAVgAQXfBnoeh85x8Gh/view?usp=drive_link">
+                  Question Papers</option>
+
+            </li>
+            </select>
+          </ol>
+        </div>
+
+
+      </ul>
+    </section>
+
+
+    <section>
+      <h3>Syllabus</h3>
+      <p class="para">Access your All Subjects Syllabus Here.</p>
+
+
+      <h3>Notes</h3>
+      <p class="para">Discover your syllabus study materials such as Hand-written Notes,Study Guides,and Diagrams to
+        make your learning better .</p>
+
+      <h3>Practicals</h3>
+      <p class="para"> Get your Practical Assignment of all practical subjects. </p>
+
+      <h3>Assignments</h3>
+      <p class="para"> Access your Assignment notes here of all subjects.</p>
+
+      <h3>Question Papers</h3>
+      <p class="para"> Here you can Access all Previous Year Question Papers easily that can be more helpful for your
+        Exam Preparation.</p>
+
+    </section>
+
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p align="justify">At BCA Helper, we are committed to providing high-quality documents to meet your various
+
+        study needs. We strive to offer a user-friendly experience with easy navigation and quick downloads, making
+        it
+
+        convenient for you to access the documents you need.</p>
+
+      <div class="ytChannel">
+        <img src="./ytLogo.png" alt="logo" class="logo">
+        <p>
+          My Youtube Channel <a href="https://youtube.com/@CodingWithJas">Click here </a>
+        </p>
+
+      </div>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; BCAHelper.com All rights reserved (2024) | website by <strong>Jaswant Singh</strong> !!</p>
+  </footer>
+
+  <script>
+    document.oncontextmenu = () => {
+      alert("Don't try to hack us from right click. 😍🤪");
+      return false;
+    }
+
+    document.onkeydown = e => {
+
+      if (e.key == "F12") {
+        alert("Don't try to inspect element. 😍");
+        return false;
+      }
+
+      if (e.ctrlKey && e.key == "u") {
+        alert("Don't try to view Page Source. 😍");
+        return false;
+      }
+
+      if (e.ctrlKey && e.key == "U") {
+        alert("Don't try to view Page Source. 😍");
+        return false;
+      }
+
+      if (e.ctrlKey && e.key == "c") {
+        alert("Don't try to copy page element. 😍");
+        return false;
+      }
+
+      if (e.ctrlKey && e.key == "v") {
+        alert("Don't try to paste anything to page. 😍");
+        return false;
+      }
+
+      if (e.ctrlKey && e.shiftKey && e.key == "I") {
+        alert("Naa munna naa , Tumse na ho payega. 😍");
+        return false;
+      }
+
+      if (e.ctrlKey && e.shiftKey && e.key == "i") {
+        alert("Naa munna naa , Tumse na ho payega. 😍");
+        return false;
+      }
+    }
+
+  </script>
+  <script src="https://kit.fontawesome.com/cd08efc085.js" crossorigin="anonymous"></script>
+  </script>
+</body>
+
+</html>

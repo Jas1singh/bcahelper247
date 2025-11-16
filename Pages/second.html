@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BCAHelper.com</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(to right bottom, #d8d1cf, #95dae5);
+      /* background: linear-gradient(to right bottom, #cebfb9, #54b4c2); */
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      height: 80px;
+      padding: 20px;
+      margin: 0px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      margin-right: 30px;
+    }
+
+    header h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: cyan;
+      word-spacing: 6px;
+      font-size: 44px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    nav {
+      background-color: #0a1d30;
+      color: #fff;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 14px 20px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav ul li {
+      list-style-type: none;
+    }
+
+    nav ul li i {
+      margin-right: 6px;
+    }
+
+    nav ul li a {
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    nav ul li select {
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 2px;
+    }
+
+    nav ul li a:hover,
+    ul li a.active {
+      text-decoration: underline 2px;
+      text-underline-offset: 4px;
+      text-decoration-color: #fff;
+      color: #007cf9;
+    }
+
+    nav .loginBtn {
+      border: none;
+      background-color: #0b76bd;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 8px 20px;
+      cursor: pointer;
+    }
+
+    nav .loginBtn:hover {
+      background-color: #0091ff;
+    }
+
+    main {
+      padding: 20px;
+      float: left;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section ul li a {
+      text-decoration: none;
+    }
+
+    .para {
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    h4 {
+      margin-top: 44px;
+      color: #ef0808;
+      font-size: 24px;
+    }
+
+    h4:first-child {
+      margin-top: 32px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    #second .bold {
+      font-size: 22px;
+      margin-top: 6px;
+    }
+
+    #about {
+      margin-top: 80px;
+      margin-bottom: 50px;
+    }
+
+    .ytChannel {
+      margin-top: 20px;
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ytChannel img {
+      position: absolute;
+      float: left;
+      left: 37%;
+    }
+
+    .ytChannel p {
+      font-weight: 800;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+    }
+
+    .ytChannel p a {
+      text-decoration: none;
+      color: blue;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #336699;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      float: left;
+      width: 100%;
+      position: fixed;
+      bottom: 0px;
+    }
+
+    footer strong {
+      color: rgb(244, 141, 7);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    @media screen and (max-width:1024px) {
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 26px;
+        width: 100%;
+      }
+
+      nav ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        /* margin-left: 12px;
+        margin-right: 4px; */
+      }
+
+      nav ul li a {
+        padding: 6px 2px;
+      }
+
+      nav ul li select {
+        padding: 1px;
+      }
+
+      .foundation {
+        font-size: 20px;
+      }
+
+      .foundation select {
+        padding: 8px 10px;
+        font-size: 20px;
+        margin-bottom: 6px;
+        width: 70%;
+      }
+
+      #about .ytChannel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 12px;
+        margin-bottom: 54px;
+        margin-right: 12px;
+      }
+
+
+      #about .ytChannel img {
+        position: relative;
+        float: left;
+        left: 10%;
+      }
+
+      #about .ytChannel p {
+        font-weight: 800;
+        font-size: 18px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <img src="./bca_logo1.png" alt="logo" class="logo">
+    <h1>BCA Helper</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+      <!-- <li><a href="#subjects">Subjects</a></li> -->
+      <li><a href="#year" class="active">Resources
+          <select name="year" onchange="location = this.value;">
+            <option value="./first.html">First</option>
+            <option value="./second.html" selected>Second</option>
+            <option value="./third.html">Third</option>
+          </select></a></li>
+      <!-- <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About Us</a></li> -->
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="second">
+      <h2>2nd Year Resources</h2>
+      <ul>
+
+        <li>
+          <h4>Java Programming </h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1lyeGTzJmR-pbbFaW5uzQDFS75QLGeeyL/view?usp=drive_link">Java
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1kuwQ25yKXUcVDm7kjtyb6y7pPfPItJt0/view?usp=drive_link">Java
+              Practical</a></li>
+          <li> <a href="https://drive.google.com/file/d/1uOK6iepJWmIQYHLBNyevBGCEBklNVM1M/view?usp=drive_link"> Java
+              Assignment </a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1BfUXdG9Zbv8H3qYHNevTNB_Y87HaPXYZ/view?usp=drive_link">Programming-with-java-NEP-2023</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1usC3VIoW65HPI35le0svD3ar6AhKwsSq/view?usp=drive_link">Programming-with-java-aug-2022</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1ayTopinU9idumP6MXCrkIo-IqtuA1_uJ/view?usp=drive_link">Introduction-to-java-jan-2019</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1IcJ3e1werVgNteGh8yNHleK3LGLETpFt/view?usp=drive_link">Introduction-to-java-dn-14-dec-2019</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1RvAprJOG7YxErGDPwBleD0pcVeLd57FP/view?usp=drive_link">Introduction-to-java-dec-2018</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1gxUc6gcYgIW9sQKhhw0f-RUC57I3CyVi/view?usp=drive_link">Introduction-to-java-jan-2017</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1RlMg29GPYZur17K82eSdZ6JpxFJTpVm1/view?usp=drive_link">Introduction-to-java-dec-2017</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1kFArQTuW98L55cqS-hPmDieG7Ry4M8Pi/view?usp=drive_link">Introduction-to-java-jan-2015</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/15J5W08R8277skWgQ8mqKMrrQ2SWScr5e/view?usp=drive_link">Introduction-to-java-dec-2015</a>
+            </li>
+
+          </ol>
+        </ul>
+
+
+        <li>
+          <h4>Data Communication Network</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1MKkMPw4vIRCD6HVx52AhZcKxgb6kbE_p/view?usp=drive_link">DCN
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1bxYmowXEhJEqxOzj3KNJnN1eyndHmari/view?usp=drive_link">DCN
+              Practical</a></li>
+          <li> <a href="https://drive.google.com/file/d/1pah6qkaCao1iveTW7WKQoQuBzL4SLe0b/view?usp=drive_link">DCN
+              Notes</a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1lYseaoiLpByrek_iHSeUNtBA00aVwOjY/view?usp=drive_link">Computer-networks-NEP-2023</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/17uSqRWypJCQHycnOVet0bqNGBzYpZPsD/view?usp=drive_link">Computer-networks-b-411-5th-sem-jan-2023</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1XWEdS0qqJFQ9EPRQ_4sCIErfKIbhON6f/view?usp=drive_link">Computer-networks-sf-439-dec-2021</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1ob_jGNZBCgmmbMzHLZfEwcfpCnKQoqNH/view?usp=drive_link">Data-and-network-communication-n714-jul-2019</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/11djbCdvitpaLHGc4Ymzuptz0xkeI25Zs/view?usp=drive_link">Data-and-network-communication-jun-2017</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/11djbCdvitpaLHGc4Ymzuptz0xkeI25Zs/view?usp=drive_link">Data-communications-and-networking-2017</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1o_T1EwCMda4Z4KiGpEViXRzPUoi43cxl/view?usp=drive_link">Data-and-network-communication-2016</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/14oRTHJtBfUcalmtJ-Kl1eG7oJx5qkwVf/view?usp=drive_link">Data-and-network-communication-2015
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1HchCMF2DkyBLD8bV1BxXgA1gRAZkTAAT/view?usp=drive_link">Data-and-network-communication-2014</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1Gzlzdx4qcVPU9tDqihUSIdG-PvjCokvw/view?usp=drive_link">Data-and-network-communication-2007</a>
+            </li>
+
+          </ol>
+
+        </ul>
+
+
+
+        <li>
+          <h4>Database Management System</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1AGCet-EehI3IftB8A6HqsPHdMRZ5rUGq/view?usp=drive_link">DBMS
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1-mlZyY2lgbzKhWxuMVZrMgPpc9smH5-m/view?usp=drive_link">DBMS
+              Assignment </a></li>
+          <li> <a href="https://drive.google.com/file/d/1d26lDNpNss-DXPOGAH3unlLNufHCRwnw/view?usp=drive_link"> DBMS
+              Practical</a></li>
+          <li> <a href="https://drive.google.com/file/d/10sDAEw53KoqERZzEWEfbSNoFaPCYwC3q/view?usp=drive_link">
+              PL_SQL</a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1sgz7VS-8HlR0JXjDxLv6wx_fQe3eTFkB/view?usp=drive_link">Database-management-system-nep-2023</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1ORBSVx0e8TepJyPzELshTtuH0aE6Pu0p/view?usp=drive_link">Database-management-system-c-385-aug-2022</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1IQbO75LbguOvYSVP-PgegILuzmfIVY5_/view?usp=drive_link">Database-management-system-j-1885-jul-2021</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1cBWPieZoLdw9wS9XfTurYohnsofSQnlK/view?usp=drive_link">Database-management-system-jun-2017</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1NcGFEYxeT8MmrJGNhHSvOnFUt66FLC5C/view?usp=drive_link">Data-base-management-system-dbms-2015</a>
+            </li>
+
+            <li><a
+                href="https://drive.google.com/file/d/1cLZnlBwi87rPsXOOPIjELebExHaLhqup/view?usp=drive_link">Data-base-management-system-dbms-2014</a>
+            </li>
+
+          </ol>
+        </ul>
+
+
+        <li>
+          <h4>Internet Of Things(IOT)</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1QkQh0hUg1AEMvYMR7DeaHO6vCp1WJx1M/view?usp=drive_link">IOT
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1ck4OlGUWLf7grGzJS4ZG5GobcHbsuXRa/view?usp=drive_link">IOT
+              Notes</a></li>
+          <li> <a href="https://drive.google.com/file/d/1yp9pJNV23jHozfvYYQ5MWPVemvvECz5A/view?usp=drive_link">IOT
+              Practical</a></li>
+
+          <div class="bold"> <B>Question Papers</B></div>
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1KZbsqN8q3pkmIwqP5ZeeUlfLK-eXdjE7/view?usp=drive_link">Internet-Of-Things-nep-2023</a>
+            </li>
+          </ol>
+
+        </ul>
+
+
+        <li>
+          <h4>E-Commerce</h4>
+        </li>
+        <ul style="list-style-type:circle">
+          <li> <a href="https://drive.google.com/file/d/1TVsQgRbcg7pN-dGn9Lk4P3kEiGnFhgRr/view?usp=drive_link">E-comm
+              Syllabus</a></li>
+          <li> <a href="https://drive.google.com/file/d/1CIDaAyuZPenoiE6N14y5f-9G0Cm-6-9-/view?usp=drive_link">E-comm
+              Practical</a></li>
+
+          <B>E-Commerce Notes </B>
+          <ul style="list-style-type:square">
+            <li><a href="https://drive.google.com/file/d/1UIDy3ypfbBlufXWC60mACWVWT8GQuBFX/view?usp=drive_link">Unit
+                1</a></li>
+            <li><a href="https://drive.google.com/file/d/14AxjfAjNQJKcZbS3UtwiTdjAc_5DWy_T/view?usp=drive_link">Unit
+                2</a></li>
+            <li><a href="https://drive.google.com/file/d/19Kr7b4GIwNCpA8HQE2gZ4lk-8wcOZ9jU/view?usp=drive_link">Unit
+                3</a></li>
+            <li><a href="https://drive.google.com/file/d/1DPs3bYB9emtrmqKIeY_lGX7qWwMm-WmZ/view?usp=drive_link">Unit
+                4</a></li>
+
+          </ul>
+          <div class="bold"> <B>Question Papers</B></div>
+          <ol type="1">
+            <li><a
+                href="https://drive.google.com/file/d/1b4Z2EtAuxSJB0GQh7Bd3v7PlNktGgR11/view?usp=drive_link">E-Commerce-NEP-2023</a>
+            </li>
+
+          </ol>
+        </ul>
+
+
+
+
+        <li>
+          <h4> Foundational Subjects</h4>
+        </li>
+        <div class="foundation">
+          <ol>
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>Hindi</option>
+                <option value="https://drive.google.com/file/d/1bApPa_5Kk9fOuNTXjb5LGiTLT7Kqkmbi/view?usp=drive_link">
+                  Syllabus</option>
+                <option value="https://drive.google.com/file/d/10hFR-Nw0fzHs8wWdlutgJNAiYIBDFyin/view?usp=drive_link">
+                  Question Papers</option>
+
+            </li>
+            </select>
+
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>English</option>
+                <option value="https://drive.google.com/file/d/1IJUeHA5Mdq27vyIiaTDLct9zD8pZT7iB/view?usp=drive_link">
+                  Syllabus</option>
+                <option value="https://drive.google.com/file/d/1Z6Hn5egCGatjNE_T79iSlAcHNhXsliyj/view?usp=drive_link">
+                  Question Papers</option>
+
+            </li>
+            </select>
+
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>Entreprenuership</option>
+                <option value="https://drive.google.com/file/d/1Taj_U4eCpgi6CERnYV5rMxMR3nStcli7/view?usp=drive_link">
+                  Syllabus</option>
+                <option value="https://drive.google.com/file/d/1Km2K9NkfWn47QomhJDBvwQuKh3UZYHou/view?usp=drive_link">
+                  Complete Notes</option>
+                <option value="https://drive.google.com/file/d/1P377s8RP6mPq2WnjlLhVd8MM3G6KkOOV/view?usp=drive_link">
+                  Question Papers</option>
+            </li>
+            </select>
+
+            <li><select onchange="location = this.value;">
+                <option value="none" selected disabled hidden>Women Empowerment</option>
+                <option value="https://drive.google.com/file/d/1Lu4ebDc51QfzDAgffCtT1PiEqJs5Abhz/view?usp=drive_link">
+                  Syllabus</option>
+                <option value="https://drive.google.com/file/d/1bQdgJEn6NGmCR0a-urp0p92Zg_YqxZhv/view?usp=drive_link">
+                  Question Papers</option>
+
+            </li>
+            </select>
+          </ol>
+        </div>
+
+      </ul>
+    </section>
+
+    <section>
+      <h3>Syllabus</h3>
+      <p class="para">Access your All Subjects Syllabus Here.</p>
+
+
+      <h3>Notes</h3>
+      <p class="para">Discover your syllabus study materials such as Hand-written Notes,Study Guides,and Diagrams to
+        make your learning better .</p>
+
+      <h3>Practicals</h3>
+      <p class="para"> Get your Practical Assignment of all practical subjects. </p>
+
+      <h3>Assignments</h3>
+      <p class="para"> Access your Assignment notes here of all subjects.</p>
+
+      <h3>Question Papers</h3>
+      <p class="para"> Here you can Access all Previous Year Question Papers easily that can be more helpful for your
+        Exam Preparation.</p>
+
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p align="justify">At BCA Helper, we are committed to providing high-quality documents to meet your various
+
+        study needs. We strive to offer a user-friendly experience with easy navigation and quick downloads, making it
+
+        convenient for you to access the documents you need.</p>
+
+      <div class="ytChannel">
+        <img src="./ytLogo.png" alt="logo" class="logo">
+        <p>
+          My Youtube Channel <a href="https://youtube.com/@CodingWithJas">Click here </a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; BCAHelper.com All rights reserved (2024) | website by <strong>Jaswant Singh</strong> !!</p>
+
+    <script>
+      document.oncontextmenu = () => {
+        alert("Don't try to hack us from right click. 😍🤪");
+        return false;
+      }
+
+      document.onkeydown = e => {
+
+        if (e.key == "F12") {
+          alert("Don't try to inspect element. 😍");
+          return false;
+        }
+
+        if (e.ctrlKey && e.key == "u") {
+          alert("Don't try to view Page Source. 😍");
+          return false;
+        }
+
+        if (e.ctrlKey && e.key == "U") {
+          alert("Don't try to view Page Source. 😍");
+          return false;
+        }
+
+        if (e.ctrlKey && e.key == "c") {
+          alert("Don't try to copy page element. 😍");
+          return false;
+        }
+
+        if (e.ctrlKey && e.key == "v") {
+          alert("Don't try to paste anything to page. 😍");
+          return false;
+        }
+
+        if (e.ctrlKey && e.shiftKey && e.key == "I") {
+          alert("Naa munna naa , Tumse na ho payega. 😍");
+          return false;
+        }
+
+        if (e.ctrlKey && e.shiftKey && e.key == "i") {
+          alert("Naa munna naa , Tumse na ho payega. 😍");
+          return false;
+        }
+      }
+
+    </script>
+    <script src="https://kit.fontawesome.com/cd08efc085.js" crossorigin="anonymous"></script>
+    </script>
+</body>
+
+</html>

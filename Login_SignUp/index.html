@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-Box" id="form-Box">
+           <a href="../index.html"> <i class="fa-solid fa-xmark" id="close"></i></a>
+            <header>
+                <h1 id="title">Login</h1>
+            </header>
+
+            <div class="popup" id="popup">
+                <img src="404-tick.png">
+                <h2>Thank You !</h2>
+                <p>You have been successfully registered your account.</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+            
+            <form name="loginForm">
+                <input type="text" id="nameField" placeholder="Name" name="name">
+                <input type="email" id="emailField" placeholder="Username or Email address" name="email">
+                <input type="password" id="passField" placeholder="Password" name="password">
+                <input type="password" id="cPassField" placeholder="Confirm Password" name="confirmPassword">
+                <a id="forgetP" href="#">Forgot Password?</a>
+                <div class="button">
+                <input onclick="submitForm()" type="submit" value="Login" id="signIn">
+                <input onclick="submitForm()" type="submit" value="Sign UP" id="signUp">
+                </div>
+
+                <div class="links">
+                    <img src="google.jpg" class="google">
+                    <img src="Facebook-logo.png" class="facebook">
+                    <img src="twitter.png" class="twitter">
+                </div>
+
+                <p onclick="change()" class="signup" id="signupBtn">Not a member? <a href="#">Sign Up</a></p>
+            </form>
+        </div>   
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/cd08efc085.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

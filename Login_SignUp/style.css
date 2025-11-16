@@ -1,0 +1,210 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("./login_background.jpg");
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 58px;
+    background-color: linear-gradient(to right bottom, #ebf4f5, #b5c6e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0px 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s , top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top:-5px;
+    border-radius: 50%;
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.popup button{
+    width: 30%;
+    margin-top:50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+.form-Box i {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    position: relative;
+    float: right;
+    font-size: 30px;
+    width: 20px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 14px;
+    cursor: pointer;
+    color: black;
+}
+
+.form-Box {
+    width: 50%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px, 28px;
+    margin-inline: 20px;
+}
+
+.form-Box header h1 {
+    margin-top: 32px;
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.form-Box form {
+    margin-block: 30px;
+}
+
+input {
+    width: 100%;
+    padding-inline: 18px;
+    padding-block: 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #a3a3a331;
+    font-size: 16px;
+    margin-block: 12px;
+}
+
+input[type="text"] {
+    display: none;
+}
+
+input[id="cPassField"] {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #564efa;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 16px;
+}
+
+#signUp {
+    display: none;
+}
+
+.button {
+    padding-top: 20px;
+    padding-inline: 70px;
+}
+
+input[type="submit"] {
+    margin-block: 24px;
+    background-color: #5851e3;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+input[type="button"]:hover {
+    background-color: #10449a;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 50px;
+}
+
+img{
+    width:56px;
+    aspect-ratio:3/2;
+    object-fit: contain;
+    mix-blend-mode:normal;
+    margin-inline: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.google{
+    width: 40px;
+    height: 40px;
+}
+
+.twitter{
+    width:37px;
+    height:35px;
+    padding:3px;
+}
+
+.signup {
+    text-align: center;
+    margin-block: 20px;
+}
+
+.signup a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5851e3;
+}
+
+.signup a:hover {
+    color: #10449a;
+    text-decoration: underline 2px;
+    text-underline-offset: 3.5px;
+}
+
+@media screen and (max-width:700px) {
+    .form-Box {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .popup{
+        width: 300px;
+    }
+}
