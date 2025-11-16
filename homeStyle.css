@@ -291,25 +291,6 @@ section {
   margin-top: 30px;
 }
 
-/* .main_content strong {
-  overflow: hidden; 
-  border-right: .15em solid blue; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  animation: typing 4s ease-in-out 1s infinite alternate-reverse, 
-             blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black; }
-} */
-
 .announcement {
   width: 100%;
   height: auto;

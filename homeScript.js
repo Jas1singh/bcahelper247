@@ -45,13 +45,12 @@
 let menu = document.querySelector('.menu');
 let ul = document.querySelector('ul');
 
-// let body = document.getElementById('body');
 
-// document.oncontextmenu = () => {
-//     alert("Don't try to hack us from right click. 😍🤪");
-//     return false;
-// }
-
+// Security code
+document.oncontextmenu = () => {
+    alert("Don't try to hack us from right click. 😍🤪");
+    return false;
+}
 
 document.onkeydown = e => {
 
@@ -91,7 +90,7 @@ document.onkeydown = e => {
     }
 }
 
-const main = document.querySelector('main'); // main content
+const main = document.querySelector('main');
 
 menu.addEventListener('click', () => {
     ul.classList.toggle('menu_active');
@@ -100,10 +99,10 @@ menu.addEventListener('click', () => {
     let menu_child = menu.firstElementChild;
     if (ul.classList.contains('menu_active')) {
         menu_child.classList.replace('fa-bars', 'fa-xmark');
-        main.style.marginTop = '280px'; // Add margin to main
+        main.style.marginTop = '280px'; 
     } else {
         menu_child.classList.replace('fa-xmark', 'fa-bars');
-        main.style.marginTop = ''; // Remove the margin when menu is closed
+        main.style.marginTop = '';
     }
 });
 
