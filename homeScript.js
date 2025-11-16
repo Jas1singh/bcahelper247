@@ -1,46 +1,46 @@
 
-// ------------------------------
-// Mobile-Friendly Visitor Tracking (GET request)
-// ------------------------------
-(async function trackVisit() {
-  try {
-    // Fetch visitor IP and location from ipwhois.app
-    let ipData = {};
-    try {
-      const res = await fetch("https://ipwhois.app/json/");
-      if (res.ok) {
-        ipData = await res.json();
-      }
-    } catch (err) {
-      console.warn("IP/Location fetch failed:", err);
-    }
+// // ------------------------------
+// // Mobile-Friendly Visitor Tracking (GET request)
+// // ------------------------------
+// (async function trackVisit() {
+//   try {
+//     // Fetch visitor IP and location from ipwhois.app
+//     let ipData = {};
+//     try {
+//       const res = await fetch("https://ipwhois.app/json/");
+//       if (res.ok) {
+//         ipData = await res.json();
+//       }
+//     } catch (err) {
+//       console.warn("IP/Location fetch failed:", err);
+//     }
 
-    // Prepare payload
-    const payload = {
-      page_url: window.location.href,
-      user_agent: navigator.userAgent,
-      referrer: document.referrer || "direct",
-      ip: ipData.ip || "unknown",
-      city: ipData.city || "unknown",
-      region: ipData.region || "unknown",
-      country: ipData.country || "unknown",
-      latitude: ipData.latitude || "unknown",
-      longitude: ipData.longitude || "unknown",
-    };
+//     // Prepare payload
+//     const payload = {
+//       page_url: window.location.href,
+//       user_agent: navigator.userAgent,
+//       referrer: document.referrer || "direct",
+//       ip: ipData.ip || "unknown",
+//       city: ipData.city || "unknown",
+//       region: ipData.region || "unknown",
+//       country: ipData.country || "unknown",
+//       latitude: ipData.latitude || "unknown",
+//       longitude: ipData.longitude || "unknown",
+//     };
 
-    //  Convert payload to query parameters (GET request)
-    const params = new URLSearchParams(payload).toString();
+//     //  Convert payload to query parameters (GET request)
+//     const params = new URLSearchParams(payload).toString();
 
-    //  Send data to Webhook.site via GET
-    const webhookURL = "https://webhook.site/c7dd0ce8-ecc8-4eae-b9e7-24a0326b781f"; // Replace with your URL
-    await fetch(`${webhookURL}?${params}`)
-      .then(() => console.log("Visitor tracked successfully"))
-      .catch(err => console.error("Webhook send error:", err));
+//     //  Send data to Webhook.site via GET
+//     const webhookURL = "https://webhook.site/c7dd0ce8-ecc8-4eae-b9e7-24a0326b781f"; // Replace with your URL
+//     await fetch(`${webhookURL}?${params}`)
+//       .then(() => console.log("Visitor tracked successfully"))
+//       .catch(err => console.error("Webhook send error:", err));
 
-  } catch (err) {
-    console.error("Tracking error:", err);
-  }
-})();
+//   } catch (err) {
+//     console.error("Tracking error:", err);
+//   }
+// })();
 
 let menu = document.querySelector('.menu');
 let ul = document.querySelector('ul');
