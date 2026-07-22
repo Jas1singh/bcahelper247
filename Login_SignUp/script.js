@@ -540,3 +540,48 @@ function logout() {
 
     window.location.reload();
 }
+
+// // Page Protection from Inspect , Copy , Paste Or view Page Source
+
+document.oncontextmenu = () => {
+    alert("Don't try to hack us from right click. 😍🤪");
+    return false;
+}
+
+document.onkeydown = e => {
+
+    if (e.key == "F12") {
+        alert("Don't try to inspect element. 😍");
+        return false;
+    }
+
+    if (e.ctrlKey && e.key == "u") {
+        alert("Don't try to view Page Source. 😍");
+        return false;
+    }
+
+    if (e.ctrlKey && e.key == "U") {
+        alert("Don't try to view Page Source. 😍");
+        return false;
+    }
+
+    if (e.ctrlKey && e.key == "c") {
+        alert("Don't try to copy page element. 😍");
+        return false;
+    }
+
+    if (e.ctrlKey && e.key == "v") {
+        alert("Don't try to paste anything to page. 😍");
+        return false;
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key == "I") {
+        alert("Naa munna naa , Tumse na ho payega. 😍");
+        return false;
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.key == "i") {
+        alert("Naa munna naa , Tumse na ho payega. 😍");
+        return false;
+    }
+}
