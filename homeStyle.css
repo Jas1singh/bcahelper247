@@ -33,11 +33,20 @@ header h1 {
   color: cyan;
   word-spacing: 6px;
   font-size: 44px;
+  margin-left: 270px;
 }
 
 .social_media {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 380px;
 }
+
+.social_media h3 {
+  margin-right: 20px;
+}
+
 
 .social_media a {
   display: block;
@@ -232,6 +241,10 @@ nav .loginBtn:hover {
   .menu {
     display: flex;
     cursor: pointer;
+  }
+
+  .social_media h3 {
+    margin-right: 4px;
   }
 
   nav ul {

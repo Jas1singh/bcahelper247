@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,6 +47,86 @@
     </div>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/cd08efc085.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-Box" id="form-Box">
+
+            <a href="../index.html">
+                <i class="fa-solid fa-xmark" id="close"></i>
+            </a>
+
+            <header>
+                <h1 id="title">Login</h1>
+            </header>
+
+            <div class="popup" id="popup">
+                <img src="404-tick.png" alt="">
+                <h2>Thank You!</h2>
+                <p>You have successfully registered your account.</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+
+            <form name="loginForm">
+
+                <input type="text" id="nameField" placeholder="Name" name="name">
+
+                <input type="email" id="emailField" placeholder="Username or Email address" name="email">
+
+                <input type="password" id="passField" placeholder="Password" name="password">
+
+                <input type="password" id="cPassField" placeholder="Confirm Password" name="confirmPassword">
+
+                <a id="forgetP" href="#">Forgot Password?</a>
+
+                <div class="button">
+                    <!-- <input
+                        onclick="submitForm(event)"
+                        type="submit"
+                        value="Login"
+                        id="signIn"> -->
+                    <input onclick="submitForm(event)" type="submit" value="Login" id="submitBtn">
+                </div>
+
+                <div class="links">
+                    <img src="google.jpg" class="google" alt="">
+                    <img src="Facebook-logo.png" class="facebook" alt="">
+                    <img src="twitter.png" class="twitter" alt="">
+                </div>
+
+                <p onclick="change()" class="signup" id="signupBtn">
+                    Not a member? <a href="#">Sign Up</a>
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/cd08efc085.js" crossorigin="anonymous"></script>
+
+    <!-- Since your JavaScript already knows whether it's login or signup using isSignupMode, you don't need two buttons. You can simply have one submit button whose text changes between Login and Sign Up. This makes the code cleaner and avoids confusion.
+
+I can also show you that version while keeping your signup/login logic exactly the same. -->
 
 </body>
 

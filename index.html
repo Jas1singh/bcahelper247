@@ -16,6 +16,7 @@
     <img src="Body_images/bca_logo1.png" alt="logo" class="logo">
     <h1>BCA Helper</h1>
     <div class="social_media">
+      <h3>Welcome <span id="userName"></span></h3>
       <a href="https://www.instagram.com/invites/contact/?i=abh5foruxqxl&utm_content=fmsczbc"
         style="--clr: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)"
         class="fa fa-instagram"></a>
@@ -43,7 +44,12 @@
           </select></a></li>
       <li><a href="#contact">Contact Us</a></li>
       <li><a href="#about">About Us</a></li>
-      <li><a href="Login_Signup/index.html" id="singInBtn" class="loginBtn">Login</a></li>
+      <!-- <li><a href="Login_Signup/index.html" id="singInBtn" class="loginBtn">Login</a></li> -->
+      <li>
+        <a href="Login_Signup/index.html" id="singInBtn" class="loginBtn">
+          Login
+        </a>
+      </li>
     </ul>
 
     <div class="menu">
@@ -169,7 +175,7 @@
                 <h2>Contact Us</h2>
               </legend>
               <label for="name">Name:</label>
-              <input type="hidden" name="access_key" value="ad90fd50-43e4-4602-a7bd-5487d8c240a3">
+              <input type="hidden" name="access_key" value="195314e5-fab1-4c81-9f03-713071416e7e">
               <input type="text" id="name" name="name" required>
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required>
@@ -209,6 +215,64 @@
   <script src="https://kit.fontawesome.com/cd08efc085.js" crossorigin="anonymous"></script>
   </script>
   <script src="homeScript.js"></script>
+  <!-- <script>
+    const currentUser = JSON.parse(
+      localStorage.getItem("loggedInUser")
+    );
+
+    if (currentUser) {
+      document.getElementById("userName").textContent =
+        currentUser.name;
+    }
+  </script> -->
+
+  <script>
+
+const loginBtn = document.getElementById("singInBtn");
+const userName = document.getElementById("userName");
+
+const currentUser = JSON.parse(
+    localStorage.getItem("loggedInUser")
+);
+
+
+if (currentUser) {
+
+    // Show username
+    userName.textContent = currentUser.name;
+
+    // Change Login to Logout
+    loginBtn.textContent = "Logout";
+
+    loginBtn.href = "#";
+
+    loginBtn.onclick = function () {
+
+        localStorage.removeItem("loggedInUser");
+
+        // Remove username
+        userName.textContent = "";
+
+        // Change Logout back to Login
+        loginBtn.textContent = "Login";
+
+        loginBtn.href = "Login_Signup/index.html";
+
+        // Optional refresh
+        window.location.reload();
+    };
+
+} else {
+
+    // User not logged in
+    userName.textContent = "";
+
+    loginBtn.textContent = "Login";
+
+    loginBtn.href = "Login_Signup/index.html";
+}
+
+</script>
 </body>
 
 </html
