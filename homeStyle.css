@@ -11,7 +11,7 @@ body {
   /* background: linear-gradient(to right bottom , #cebfb9 ,#54b4c2); */
 }
 
-header {
+/* header {
   background-color: #003366;
   color: #fff;
   height: 80px;
@@ -60,6 +60,56 @@ header h1 {
   margin-inline: 5px;
   margin-bottom: 10px;
   border-radius: 50%;
+} */
+
+header {
+    background: #003366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    color: cyan;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.social_media h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.social_media a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    background: var(--clr);
 }
 
 .fa:hover {
@@ -237,15 +287,38 @@ nav .loginBtn:hover {
   display: none;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:768px) {
   .menu {
     display: flex;
     cursor: pointer;
   }
 
-  .social_media h3 {
-    margin-right: 4px;
-  }
+    header{
+        padding:10px;
+    }
+
+    .logo{
+        width:42px;
+        height:42px;
+    }
+
+    header h1{
+        font-size:22px;
+    }
+
+    .social_media h3{
+        display:none;   /* Hide "Follow Us" on mobile */
+    }
+
+    .social_media{
+        gap:4px;
+    }
+
+    .social_media a{
+        width:26px;
+        height:26px;
+        font-size:13px;
+    }
 
   nav ul {
     display: none;
@@ -257,7 +330,7 @@ nav .loginBtn:hover {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 138px;
+    top: 123px;
     left: 0px;
     width: 100%;
     height: 300px;
