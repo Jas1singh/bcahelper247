@@ -54,10 +54,10 @@ document.oncontextmenu = () => {
 
 document.onkeydown = e => {
 
-    // if (e.key == "F12") {
-    //     alert("Don't try to inspect element. 😍");
-    //     return false;
-    // }
+    if (e.key == "F12") {
+        alert("Don't try to inspect element. 😍");
+        return false;
+    }
 
     if (e.ctrlKey && e.key == "u") {
         alert("Don't try to view Page Source. 😍");
